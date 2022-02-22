@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Facilidad de uso">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="Apodo de usuario"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="csa"
+            app:title="Iniciar musica al conectar audifonos" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Preferencias de usuario">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="Recibir recomendaciones de musica" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="No recibiras notificaciones de la aplicacion"
+            app:summaryOn="Te llegaran notificacioes"
+            app:title="Activar notificaciones" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
